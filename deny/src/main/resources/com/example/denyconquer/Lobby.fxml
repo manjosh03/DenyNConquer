@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+
+
+<GridPane fx:controller="com.example.denyconquer.LobbyController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center"
+          hgap="10" vgap="10"
+          stylesheets="@styles.css"
+          id="gridPane">
+    <padding><Insets top="20" right="40" bottom="20" left="40"/></padding>
+    <columnConstraints>
+        <ColumnConstraints minWidth="150" prefWidth="150"
+                           maxWidth="150" halignment="RIGHT">
+        </ColumnConstraints>
+        <ColumnConstraints minWidth="150" prefWidth="150"
+                           maxWidth="150" >
+        </ColumnConstraints>
+    </columnConstraints>
+    <Label text="Waiting Area" GridPane.columnIndex="0"
+           GridPane.rowIndex="0" GridPane.columnSpan="2"
+           GridPane.rowSpan="1" GridPane.halignment="CENTER" >
+        <font>
+            <Font name="Verdana" size="24" ></Font>
+        </font>
+        <GridPane.margin>
+            <Insets top="0" right="0" bottom="10" left="0"></Insets>
+        </GridPane.margin>
+    </Label>
+    <Text fx:id="gameStartText" strokeType="OUTSIDE" visible="false"
+          GridPane.columnIndex="0" GridPane.rowIndex="1"
+          GridPane.columnSpan="2" GridPane.rowSpan="1"
+          GridPane.halignment="CENTER"
+          text="Playing in: 3">
+        <font>
+            <Font size="30.0" />
+        </font>
+    </Text>
+    <ListView fx:id="lobbyMembersListView" focusTraversable="false" GridPane.columnIndex="0"
+              GridPane.rowIndex="3" GridPane.columnSpan="2"
+              GridPane.rowSpan="1">
+        <VBox.margin>
+            <Insets left="5.0" right="5.0" top="10.0" />
+        </VBox.margin>
+    </ListView>
+</GridPane>
+

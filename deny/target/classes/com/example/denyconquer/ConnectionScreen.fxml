@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+
+<GridPane fx:controller="com.example.denyconquer.WaitingStageController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center"
+          hgap="10" vgap="10"
+          stylesheets="@styles.css"
+          id="gridPane">
+    <padding><Insets top="20" right="40" bottom="30" left="40"/></padding>
+    <columnConstraints>
+        <ColumnConstraints minWidth="100" prefWidth="100"
+                           maxWidth="100" halignment="RIGHT">
+        </ColumnConstraints>
+        <ColumnConstraints minWidth="100" prefWidth="100"
+                           maxWidth="100" >
+        </ColumnConstraints>
+    </columnConstraints>
+    <Label text="Deny and conquer" GridPane.columnIndex="0"
+           GridPane.rowIndex="0" GridPane.columnSpan="2"
+           GridPane.rowSpan="1" GridPane.halignment="CENTER" >
+        <font>
+            <Font name="Arial" size="24" ></Font>
+        </font>
+        <GridPane.margin>
+            <Insets top="20" right="0" bottom="20" left="0"></Insets>
+        </GridPane.margin>
+    </Label>
+
+    <Label text="IP / Hostname:" GridPane.columnIndex="0"
+           GridPane.rowIndex="1" >
+    </Label>
+
+    <TextField fx:id="hostName" promptText="localhost" prefHeight="20"
+               GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.hgrow="NEVER"/>
+
+    <Label text="Port Number:" GridPane.columnIndex="0"
+           GridPane.rowIndex="2" >
+    </Label>
+    <TextField fx:id="portText" promptText="8080" prefHeight="20"
+               GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.hgrow="NEVER"/>
+
+    <Button fx:id="connectButton" text="Connect to server"
+            prefWidth="150" prefHeight="30"
+            GridPane.columnIndex="0" GridPane.rowIndex="4"
+            GridPane.columnSpan="2" GridPane.rowSpan="1"
+            GridPane.halignment="CENTER"
+            onMouseClicked="#connectButtonClicked" >
+        <font>
+            <Font size="13.0" />
+        </font>
+        <GridPane.margin>
+            <Insets top="20" right="0" bottom="20" left="0"></Insets>
+        </GridPane.margin>
+    </Button>
+    <Text fx:id="connectMessage" text="Text" visible="false">
+        <VBox.margin>
+            <Insets top="-20.0" />
+        </VBox.margin>
+    </Text>
+
+</GridPane>
+
